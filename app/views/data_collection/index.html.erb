@@ -1,0 +1,18 @@
+<h1>Data Collection</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Author</th>
+      <th>Content</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @data_collection.each do |quote| %>
+      <tr>
+        <td><%= quote.author.name %></td>
+        <td><%= quote.content %></td>
+        <td><%= link_to 'View', data_entry_path(quote) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

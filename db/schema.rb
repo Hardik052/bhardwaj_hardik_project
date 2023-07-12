@@ -10,11 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_12_150628) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_12_171847) do
   create_table "authors", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "genres", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "genres_quotes", id: false, force: :cascade do |t|
+    t.integer "genre_id", null: false
+    t.integer "quote_id", null: false
   end
 
   create_table "quotes", force: :cascade do |t|
@@ -22,6 +33,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_12_150628) do
     t.integer "author_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "genre_id", null: false
+    t.index ["genre_id"], name: "index_quotes_on_genre_id"
   end
 
+  add_foreign_key "quotes", "genres"
 end
