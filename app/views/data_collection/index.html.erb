@@ -1,3 +1,7 @@
+<%= form_tag data_collection_path, method: :get do %>
+  <%= text_field_tag :search, params[:search], placeholder: "Search..." %>
+  <%= submit_tag "Search" %>
+<% end %>
 <h1>Data Collection</h1>
 <table>
   <thead>

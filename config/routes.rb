@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'about', to: 'about#index'
   get 'data_collection', to: 'data_collection#index'
   get 'data_entries/:id', to: 'data_entries#show', as: 'data_entry'
+  get 'data_collection/index'
 
 
   resources :authors, only: [:index, :show] do

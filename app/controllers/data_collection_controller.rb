@@ -1,5 +1,9 @@
 class DataCollectionController < ApplicationController
   def index
-    @data_collection = Quote.all.page(params[:page])
+    if params[:search]
+      @data_collection = Quote.where("content LIKE ?", "%#{params[:search]}%").page(params[:page]).per(2)
+    else
+      @data_collection = Quote.page(params[:page]).per(2)
+    end
   end
 end
