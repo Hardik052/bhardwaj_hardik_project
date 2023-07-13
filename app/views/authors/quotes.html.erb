@@ -1,7 +1,7 @@
 <h1>Quotes by <%= @author.name %></h1>
 <p>Author:</p>
 <%= link_to @author.name, author %>
-<ul>
+<ul class="list-group">
   <% @quotes.each do |quote| %>
     <li><%= link_to quote.content, quote %></li>
   <% end %>
