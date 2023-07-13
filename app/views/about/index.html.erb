@@ -2,12 +2,12 @@
 <p>This web application uses data from various sources to provide meaningful insights.</p>
 <h2 class="display-4">Data Sources</h2>
 <ul class="list-group">
-  <li class="list-group-item d-flex justify-content-between align-items-center">I have selected API https://quote-garden.onrender.com/api/v3/genres with other twoi endpoints auhtor and quotes I am taking in the data regarding quotes, its authores and its genre codes. There will be four tables quotes, genre, work and author and there will be one-to-many assosciation between author and quotes and author and work and one to many assosciation in quotes and genre models </li>
-  <li  class="list-group-item d-flex justify-content-between align-items-center">ApI data is structured in JSON format. I have made 5 tables, Author, Work, Genre , genre_quotes and quotes as seen in the ERD. Here, genres_quotes is the join table which is used as the sulution to come over many-to-many relationship between genre and quotes table</li>
-  <li  class="list-group-item d-flex justify-content-between align-items-center">Data Source 1  fetches quotes with the quote_id. </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">I have selected API https://quote-garden.onrender.com/api/v3/genres with other two endpoints author and quotes I am taking in the data regarding quotes, its authores and its genre codes. There will be four tables quotes, genre, work and author and there will be one-to-many assosciation between author and quotes and author and work and one to many assosciation in quotes and genre models </li>
+  <li  class="list-group-item d-flex justify-content-between align-items-center">API data is structured in JSON format. I have made 5 tables that are: Author, Work, Genre , genre_quotes and quotes as seen in the ERD. Here, genres_quotes is the join table which is used as the sulution to come over many-to-many relationship between genre and quotes table</li>
+  <li  class="list-group-item d-flex justify-content-between align-items-center">Data Source 1  fetches quotes with the quote_id as PK. </li>
   <li  class="list-group-item d-flex justify-content-between align-items-center">Data Source 2 fetches Authors and is assosciated with quotes with quote_id as FK </li>
   <li  class="list-group-item d-flex justify-content-between align-items-center">Data Source 3 fetches genre codes and is related with quotes by quote_id as FK</li>
   <!-- Add more data sources if applicable -->
 </ul>
 <h2 class="display-4">Entity-Relationship Diagram (ERD)</h2>
-<%= image_tag 'erd52.drawio(1)', alt:'erd' %>
+<%= image_tag 'erd52.drawio(1)(1)', alt:'erd' %>
