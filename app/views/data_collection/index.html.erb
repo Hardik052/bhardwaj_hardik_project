@@ -2,8 +2,8 @@
   <%= text_field_tag :search, params[:search], placeholder: "Search..." %>
   <%= submit_tag "Search" %>
 <% end %>
-<h1>Data Collection</h1>
-<table>
+<h1 class="display-1">Data Collection</h1>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Author</th>
@@ -20,4 +20,10 @@
     <% end %>
   </tbody>
 </table>
-<%= paginate @data_collection %>
+<nav aria-label="Page navigation example">
+<ul class = "pagination">
+<li class = "page-item">
+<%= paginate @data_collection%>
+</li>
+</ul>
+</nav>

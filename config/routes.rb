@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'data_collection', to: 'data_collection#index'
   get 'data_entries/:id', to: 'data_entries#show', as: 'data_entry'
   get 'data_collection/index'
+  resources :genres, only: [:index, :show]
 
 
   resources :authors, only: [:index, :show] do

@@ -1,4 +1,12 @@
-<h1>Data Entry</h1>
-<p><strong>Author:</strong> <%= @data_entry.author.name %></p>
-<p><strong>Content:</strong> <%= @data_entry.content %></p>
-<p>Genre: <%= @data_entry.genre.name %></p>
+<h1 class="display-3">Data Entry</h1>
+<table class="table table-striped">
+<tr>
+<th>Author</th>
+<th>Content</th>
+</tr>
+<tr>
+<td> <%= @data_entry.author.name %></td>
+<td><%= @data_entry.content %></td>
+</tr>
+</table>
+
