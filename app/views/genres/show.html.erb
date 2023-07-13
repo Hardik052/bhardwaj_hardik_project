@@ -1,0 +1,8 @@
+<h1><%= @genre.name %></h1>
+<ul>
+  <% @quotes.each do |quote| %>
+    <li>
+      <%= quote.content %>
+    </li>
+  <% end %>
+</ul>
