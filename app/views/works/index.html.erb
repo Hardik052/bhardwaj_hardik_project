@@ -1,0 +1,11 @@
+<h1>Works</h1>
+
+<ul>
+  <% @works.each do |work| %>
+    <li>
+      <strong>Title:</strong> <%= work.title %><br>
+      <strong>Author:</strong> <%= work.author.name %><br>
+      <strong>Description:</strong> <%= work.description %>
+    </li>
+  <% end %>
+</ul>

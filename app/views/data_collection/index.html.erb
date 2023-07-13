@@ -11,7 +11,7 @@
       <tr>
         <td><%= quote.author.name %></td>
         <td><%= quote.content %></td>
-        <td><%= link_to 'View', data_entry_path(quote) %></td>
+        <td><%= link_to 'View', data_entry_path(id: quote.id) if quote.present? %></td>
       </tr>
     <% end %>
   </tbody>
